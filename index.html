@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
+  <meta name="description" content="Modality Extension for Omni-Modal Language Models">
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Is Extending Modality The Right Path Towards Omni-Modality?</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -43,6 +43,35 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    .color1 {
+      opacity: 0.3;
+      background-color: #0a9396;
+    }
+    .color2 {
+      opacity: 0.3;
+      background-color: #94d2bd;
+    }
+    .color3 {
+      opacity: 0.3;
+      background-color: #e9d8a6;
+    }
+    .color4 {
+      opacity: 0.3;
+      background-color: #ee9b00;
+    }
+    .color5 {
+      opacity: 0.3;
+      background-color: #ca6702;
+    }
+    .color6 {
+      opacity: 0.3;
+      background-color: #bb3e03;
+    }
+  </style>
 </head>
 <body>
 
@@ -56,16 +85,27 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                <a href="https://darthzhu.github.io/" target="_blank">Tinghui Zhu*</a><sup>1</sup>&emsp;
+              </span>
+              <span class="author-block">
+                <a href="https://drogozhang.github.io/" target="_blank">Kai Zhang*</a><sup>2</sup>&emsp;
+              </span>
+              <span class="author-block">
+                <a href="https://muhaochen.github.io/" target="_blank">Muhao Chen</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://ysu1989.github.io/" target="_blank">Yu Su</a><sup>2</sup>&emsp;
+              </span>
+              <span class="author-block">
+              </span>
+            </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">
+                      <sup>1</sup>University of California, Davis&emsp;
+                      <sup>2</sup>The Ohio State University<br>
+                      <!-- <br>Conferance name and year -->
+                    </span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -83,7 +123,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,7 +131,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -124,11 +164,10 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -137,7 +176,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -148,7 +187,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Omni-modal language models (OLMs) aim to integrate and reason over diverse input modalities—such as text, images, video, and audio—while maintaining strong language capabilities. Despite recent advancements, existing models, especially open-source ones, remain far from true omni-modality, struggling to generalize beyond the specific modality pairs they are trained on or to achieve strong performance when processing multi-modal inputs.
+            We study the effect of extending modality, the dominant technique for training multimodal models, where an off-the-shelf language model is fine-tuned on target-domain and language data.
+            Specifically, we investigate three key questions: 
+            <ul>
+              <li>Does modality extension compromise core language abilities?</li>
+              <li>Can model merging effectively integrate independently fine-tuned modality-specific models to achieve omni-modality?</li>
+              <li>Does omni-modality extension lead to better knowledge sharing and generalization compared to sequential extension?</li>
+            </ul>
+            Through extensive experiments, we analyze these trade-offs and provide insights into the feasibility of achieving true omni-modality using current approaches.
           </p>
         </div>
       </div>
@@ -157,110 +204,175 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">On the Impact of Modality Fine-Tuning on Base LLM</h2>
+        <div class="content has-text-justified">
+          <!-- <img src="static/images/language.png" height="100%"/> -->
+          <p>
+            Supervised fine-tuning on specific modalities has proven effective in extending LLMs from purely textual to multimodal capabilities, especially with the LLM co-training with the modality encoder and projector.
+            However, modality fine-tuning without freezing the base LLM alters its default parameters, potentially affecting its original performance.
+            While some studies have discussed preserving the base LLM's capabilities, the broader implications of modality fine-tuning remain largely underexplored.
+          </p> 
+          <img src="static/images/language.png" height="100%"/>
+          <!-- <h2 class="subtitle has-text-centered">
+            Results of detecting cross-modality parametric knowledge conflicts.
+          </h2> -->
+          <p>
+            Modality fine-tuning has multiple impact on the base LLM, including:
+            <ul>
+              <li>Visual modality extends the scope of parametric knowledge.</li>
+              <li>Modality fine-tuning harms instruction following, reasoning, and safety.</li>
+              <li>Video modality may enhance the long context ability.</li>
+              <li>Modality fine-tuning has a mixed effect on multilingual performance.</li>
+            </ul>
+          </p>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">On Model Merging Towards an Omni-Modal Language Model</h2>
+        <div class="content has-text-justified">
+          <p>
+            Having gained a clearer insight into the impact of modal-lity fine-tuning, demonstrating both its benefits and drawbacks on the textual modality, we now explore a potential path towards omni-modal language models. Specifically, we ask: Is it possible to preserve the positive effects and extend multimodal capabilities without further training the existing models?
+          </p>
+          <h3 class="subtitle is-4">Merging Methods</h3>
+          <p>
+            We employ two widely used model merging techniques: average merging and weighted average merging, both of which are task- and modality-agnostic.
+            <ul>
+              <li><strong>Average Merging</strong>: \(\theta_\text{merge} = \sum_{i=1}^n \theta_i,\) where \(\theta_i\) represents the parameters of the $i^\text{th}$ candidate model.</li>
+              <li><strong>Weighted Average Merging</strong>: \(\theta_\text{merge} = \sum_{i=1}^n \alpha_i \theta_i\,) where \(\alpha_i\) denotes the weight assigned to the parameters of the \(i^\text{th}\) model.  </li>
+            </ul>
+          </p>
+          <h3 class="subtitle is-4">Merging Units</h3>
+          <p>
+            To determine the appropriate design for parameter weights in model merging, we must first answer a fundamental question: <em>What is the largest unit to which model merging can be applied?</em>
+          </p>
+          <img src="static/images/heatmap.png" height="100%"/>
+          <p>
+            We analyze <em>head-level modality salience</em>, which quantifies the contribution of individual attention heads to modality-specific tasks.
+            Across all three evaluation metrics, masking any attention head results in a substantial performance drop, indicating that no single head is dispensable for specific modality processing, unlike retrieval or long context abilities.
+            This suggests that modality fine-tuning modifies the entire parameter set rather than only specific attention heads, implying that the model merging weight design should account for all parameters rather than a subset of them.
+            Additionally, a notable trend emerges: attention heads in shallower layers (closer to the input) exert a greater influence on multimodal performance compared to those in deeper layers.
+            This observation aligns with the established role of transformer layers, where shallow layers primarily focus on semantic understanding, while deeper layers perform integration and reasoning.
+          </p>
+          <h3 class="subtitle is-4">Weighted Model Merging</h3>
+          <p>
+            Since attention heads are too coarse-grained for effective model merging, we refine our approach by considering parameter matrices.
+            To quantify the extent of parameter modifications due to modality fine-tuning, we compute \(\Delta_\text{avg}\) for each tensor, defined as:  
+            $$\Delta_\text{avg} = \text{avg} |\theta_\text{ori} - \theta_\text{mft}|,$$
+            where \(\theta_\text{ori}\) represents the parameters of the original LLM, and \(\theta_\text{mft}\) denotes those of the modality fine-tuned LLM.
+            This metric captures the average parameter shifts across the model after modality fine-tuning.
 
+            The average parameter shift of Qwen2-VL-7B-Instruct is 10 times larger than those of LLaVA-Video-7B-Qwen2 and LLaVA-OneVision-Qwen2-7B-SI.
+            This observation supports the hypothesis that greater specialization in a modality results in more substantial parameter deviations. 
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            Motivated by this insight, we incorporate \(\Delta_\text{avg}\) into the weight design for model merging.
+            Specifically, for each model parameter \(\theta_i\), we first compute \(\Delta_\text{avg}^i\).
+            We then apply softmax to the set \(\{\Delta_\text{avg}^1, \Delta_\text{avg}^2, ..., \Delta_\text{avg}^n\}\), transforming the values into a probability distribution \(\{\alpha_1, \alpha_2, ..., \alpha_n\}\).
+            The final weighted-averaged parameter is thus formulated as:  
+            $$\theta_\text{merge} = \alpha_0 \theta_0 + (1-\alpha_0)\sum_{i=1}^n \alpha_i \theta_i.$$
+          </p>
+          <h3 class="subtitle is-4">Results</h3>
+          <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+             <div class="item">
+                <img src="static/images/merge_language.png" height="100%" alt="MY ALT TEXT"/>
+                <h2 class="subtitle has-text-centered">
+                  Performance of merged LLMs across all evaluated domains of textual abilities.
+                </h2>
+              </div>
+              <div class="item">
+                <img src="static/images/merge_vision.png" height="100%" alt="MY ALT TEXT"/>
+                <h2 class="subtitle has-text-centered">
+                  Performance of OLMs based on merged LLMs across all evaluated domains of multimodal abilities.
+                </h2>
+              </div>
+            </div>
           </div>
+          <p>
+            We observe that:
+            <ul>
+              <li>Model merging preserves the capabilities of base models, except for <em>reasoning</em>.</li>
+              <li>Weighted model merging preserves more model abilities. Both textual and multimodal evaluations demonstrate that weighted-average model merging achieves more robust performance.</li>
+            </ul>
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">On Omni-Modality Fine-Tuning towards Omni-Modal Model</h2>
+        <div class="content has-text-justified">
+          <p>
+            Previous sections indicate that model merging still has some degradation in performance.
+            Thus, our next question is: <em>Is omni-modality fine-tuning the right path towards OLM?</em>
+          </p>
+          <h3 class="subtitle is-4">Modality Fine-Tuning on Language Model</h3>
+            <div class="container">
+              <div id="results-carousel" class="carousel results-carousel">
+              <div class="item">
+                  <img src="static/images/omni_nextgpt.png" height="100%" alt="MY ALT TEXT"/>
+                  <h2 class="subtitle has-text-centered">
+                    Performance of Omni-modal language models and modality-specific language models on image and video domains. <span class="color6">Red</span> indicates omni-modal language models and <span class="color1">blue</span> indicates modality-specific language models.
+                  </h2>
+                </div>
+                <div class="item">
+                  <img src="static/images/omni_qwen.png" height="100%" alt="MY ALT TEXT"/>
+                  <h2 class="subtitle has-text-centered">
+                    Performance of the merged omni-modal model compared to the fine-tuned omni-modal model on language benchmarks. Abs. stands for the absolute difference and Rel. stands for relative difference.
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <p>
+              The findings reveal that omni-modal fine-tuning is currently less effective and efficient than modality-specialized models.
+              Furthermore, both model merging and omni-modal fine-tuning tend to degrade the original language capabilities.
+              While both methods impact language skills, the fine-tuning approach appears to be more detrimental to core language abilities than model merging.
+            </p>
+          </div>
+        <h3 class="subtitle is-4">Modality Fine-Tuning on Merged Model</h3>
+          <p>
+            Given that model merging alone is not consistently effective in extending language models to multiple modalities while simultaneously maintaining their core language proficiencies, we shift our focus to employing small-step fine-tuning on the merged model.
+            Previous work has demonstrated that fine-tuning merged language models with a small number of training steps can enhance their performance across various language-centric abilities.
+            Consequently, we explore whether this conclusion still stands for the multimodal situation.
+          </p>
+          <img src="static/images/step.png" height="100%" alt="MY ALT TEXT"/>
+          <p>
+            To ground our analysis, we first seek to identify an optimal range for the number of fine-tuning steps.
+            We observe that performance on both MMLU and MMLU-Pro tends to decrease after approximately 1,000 fine-tuning steps.
+            In contrast, performance on MMMU generally shows improvements with fine-tuning.
+            This divergence strongly suggests a <em>modality trade-off</em>: enhancing multimodal understanding through fine-tuning can come at the cost of textual understanding.
+            This observation implies that straightforward small-step fine-tuning may present challenges for developing truly omni-modal models that excel universally across all modalities.
+          </p>
+          <img src="static/images/tsne.png" height="100%" alt="MY ALT TEXT"/>
+          <p>
+            To further understand the mechanisms contributing to the <em>modality trade-off</em>, we investigate the shifts in model weights induced by the merging process itself versus subsequent fine-tuning.
+            Fine-tuning on different modalities propels the model weights in distinct directions within the parameter space.
+            This suggests that fine-tuning encourages specialization towards the statistical properties of the specific modality it is trained on.
+            Conversely, the figure indicates that weighted model merging positions the resultant model in a region that aggregates the weights of the base models.
+          </p>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
-
-
-
-
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -270,7 +382,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
