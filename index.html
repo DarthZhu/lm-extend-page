@@ -81,7 +81,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Is Extending Modality The Right Path Towards Omni-Modality?</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -91,10 +91,10 @@
                 <a href="https://drogozhang.github.io/" target="_blank">Kai Zhang*</a><sup>2</sup>&emsp;
               </span>
               <span class="author-block">
-                <a href="https://muhaochen.github.io/" target="_blank">Muhao Chen</a><sup>1</sup>
+                <a href="https://muhaochen.github.io/" target="_blank">Muhao Chen</a><sup>1</sup>&emsp;
               </span>
               <span class="author-block">
-                <a href="https://ysu1989.github.io/" target="_blank">Yu Su</a><sup>2</sup>&emsp;
+                <a href="https://ysu1989.github.io/" target="_blank">Yu Su</a><sup>2</sup>
               </span>
               <span class="author-block">
               </span>
@@ -221,7 +221,7 @@
             Results of detecting cross-modality parametric knowledge conflicts.
           </h2> -->
           <p>
-            Modality fine-tuning has multiple impact on the base LLM, including:
+            Modality fine-tuning has multiple impacts on the base LLM, including:
             <ul>
               <li>Visual modality extends the scope of parametric knowledge.</li>
               <li>Modality fine-tuning harms instruction following, reasoning, and safety.</li>
@@ -249,7 +249,7 @@
             We employ two widely used model merging techniques: average merging and weighted average merging, both of which are task- and modality-agnostic.
             <ul>
               <li><strong>Average Merging</strong>: \(\theta_\text{merge} = \sum_{i=1}^n \theta_i,\) where \(\theta_i\) represents the parameters of the $i^\text{th}$ candidate model.</li>
-              <li><strong>Weighted Average Merging</strong>: \(\theta_\text{merge} = \sum_{i=1}^n \alpha_i \theta_i\,) where \(\alpha_i\) denotes the weight assigned to the parameters of the \(i^\text{th}\) model.  </li>
+              <li><strong>Weighted Average Merging</strong>: \(\theta_\text{merge} = \sum_{i=1}^n \alpha_i \theta_i\,\) where \(\alpha_i\) denotes the weight assigned to the parameters of the \(i^\text{th}\) model.  </li>
             </ul>
           </p>
           <h3 class="subtitle is-4">Merging Units</h3>
@@ -337,13 +337,12 @@
                   </h2>
                 </div>
               </div>
-            </div>
+              </div>
             <p>
               The findings reveal that omni-modal fine-tuning is currently less effective and efficient than modality-specialized models.
               Furthermore, both model merging and omni-modal fine-tuning tend to degrade the original language capabilities.
               While both methods impact language skills, the fine-tuning approach appears to be more detrimental to core language abilities than model merging.
             </p>
-          </div>
         <h3 class="subtitle is-4">Modality Fine-Tuning on Merged Model</h3>
           <p>
             Given that model merging alone is not consistently effective in extending language models to multiple modalities while simultaneously maintaining their core language proficiencies, we shift our focus to employing small-step fine-tuning on the merged model.
@@ -367,6 +366,7 @@
           </p>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
